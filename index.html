@@ -1,1 +1,45 @@
-Hello world!
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>BattleSheep</title>
+
+	<script src="battleSheep.js"></script>
+
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+	<div id="mainContainer">
+		<div id="canvasContainer">
+			<canvas id="testCan" width="1200" height="800" style="width:600px; height:400px;"></canvas>
+		</div>
+		<div id="formContainer">
+			<div id="sizeContainer" class="formItem">
+				Size:
+  			<input type="range" min="1" max="10" value="6" id="sizeSlider">
+			</div>
+			<div id="clearBoardContainer" class="formItem">
+				<button type="button" id="clearButton">Clear board</button>
+			</div>
+			<div id="startGameContainer" class="formItem">
+				<button type="button" id="startButton">Start game</button>
+			</div>
+			<div id="whoStartsContainer" class="formItem">
+				Who will start:
+				<div id="AIStartsContainer">
+					<input type="radio" id="AI starts" name="whoStarts" value="AISTarts" checked>
+		  		<label for="AI starts">AI starts</label>
+				</div>
+				<div id="UserStartsContainer">
+		  		<input type="radio" id="User starts" name="whoStarts" value="UserStarts">
+		  		<label for="User starts">User starts</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
