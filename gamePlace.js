@@ -1,4 +1,4 @@
-var SERVERIP = "127.0.0.1";
+var SERVERIP = "213.49.219.3";
 var SERVERPORT = 7893;
 
 var su;
