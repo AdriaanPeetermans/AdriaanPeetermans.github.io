@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Spellen Zolder</title>
+		<script src="messageParser.js"></script>
+		<script src="serverInterface.js"></script>
+		<script src="carcassonneCanvas.js"></script>
+		<script src="carcassonneMain.js"></script>
+		<script src="carcassonne.js"></script>
+
+		<link rel="stylesheet" href="carcassonne.css">
+		<link rel="icon" href="Images/carcassonneLogo.png">
+
+	</head>
+	<body onload="init()">
+
+		<div class="mainContainer">
+			<div class="topBar">
+				<div class="pWebLogoContainer">
+					<img src="Images/pWebLogo.png" height="55">
+				</div>
+				<div class="middleTopBarContainer">Spellen Zolder</div>
+				<div class="rightTopBarContainer">
+					<img src="Images/carcassonneLogo.png" height="55">
+				</div>
+			</div>
+			<div class="noConnectBar" id="noConnectBar">
+				Geen verbinding met de server!
+			</div>
+			<div class="underBar" id="underBar">
+				<div id="chatContainer" class="displayElement">
+					<div id="chatUpperBar" class="upperBar"></div>
+				</div>
+				<div id="moveContainer" class="displayElement">
+					<div id="moveUpperBar" class="upperBar"></div>
+					<div id="moveLowerBox" class="lowerBox"></div>
+				</div>
+				<div id="otherPlayerContainer" class="displayElement">
+					<div id="otherPlayerUpperBar" class="upperBar"></div>
+				</div>
+				<div id="gameInfoContainer" class="displayElement">
+					<div id="gameInfoUpperBar" class="upperBar"></div>
+				</div>
+				<div id="gameCanvasContainer">
+
+				</div>
+				<canvas id="mainCanvas">
+			</div>
+		</div>
+
+	</body>
+</html>

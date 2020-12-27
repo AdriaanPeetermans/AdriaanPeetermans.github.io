@@ -1,0 +1,509 @@
+body {
+  margin: 0px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.topBar {
+  background-color: darkred;
+  flex-grow: 0;
+  flex-basis: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pWebLogoContainer {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleTopBarContainer {
+  flex-basis: 60%;
+  color: #E0E0E0;
+  font-size: 30px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightTopBarContainer {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.noConnectBar {
+  background-color: #EC5849;
+  flex-grow: 0;
+  flex-basis: 30px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #E0E0E0;
+  font-size: 15px;
+  font-family: arial;
+}
+
+.underBar {
+  flex-grow: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+#chatContainer {
+  width: 300px;
+  height: 350px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  /* z-index: 1; */
+}
+
+#moveContainer {
+  width: 800px;
+  height: 200px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* z-index: 1; */
+}
+
+#otherPlayerContainer {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  /* top: 0px; */
+  right: 0px;
+  /* z-index: 1; */
+}
+
+#gameInfoContainer {
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  /* top: 0px; */
+  left: 0px;
+  /* z-index: 1; */
+}
+
+#mainCanvas {
+  z-index: 0;
+  background-color: #F6DDCC;
+}
+
+#gameCanvasContainer {
+  z-index: 1;
+}
+
+.displayElement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background-color: #E59866;
+  border-style: solid;
+  border-color: #BA4A00;
+  z-index: 2;
+}
+
+.upperBar {
+  height: 20px;
+  background-color: #BA4A00;
+  width: 100%;
+  cursor: pointer;
+}
+
+.lowerBox {
+  width: 100%;
+  height: 100%;
+  /* flex-grow: 1; */
+}
+
+#moveLowerBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#moveZoomDiv {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#moveZoomTextDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.moveZoomBut {
+  color: #E59866;
+  font-size: 50px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #BA4A00;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.moveZoomButPressed {
+  color: #BA4A00;
+  font-size: 50px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #E59866;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BA4A00;
+}
+
+#moveTileDiv {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-left-style: dashed;
+  border-left-color: #BA4A00;
+  border-left-width: 2px;
+}
+
+#moveTileTextDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#moveTileCanvas {
+  width: 170px;
+  height: 130px;
+  margin: 10px;
+}
+
+#moveMeepleDiv {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-left-style: dashed;
+  border-left-color: #BA4A00;
+  border-left-width: 2px;
+}
+
+#moveMeepleTextDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#moveMeepleSVGDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.moveMeepleContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#moveMeepleSVGLeft {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+#moveMeepleSVGRight {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.moveMeeplePath {
+  opacity: 1;
+  fill: #D7DBDD;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: #3B3B3B;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+  paint-order: fill markers stroke;
+}
+
+.moveMeepleNumberDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#moveScoreDiv {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  border-left-style: dashed;
+  border-left-color: #BA4A00;
+  border-left-width: 2px;
+}
+
+#moveScoreLeftDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right-color: #BA4A00;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+#moveScoreLeftPointsDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#moveScoreLeftPointsValueDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom-color: #BA4A00;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+  width: 75px;
+  margin-top: 10px;
+}
+
+#moveScoreLeftEndPointsDiv1 {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#moveScoreLeftEndPointsDiv2 {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#moveScoreLeftEndPointsValueDiv {
+  color: #BA4A00;
+  font-size: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#moveScoreRightDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.moveScoreRightEl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.moveScoreRightTextEl {
+  color: #BA4A00;
+  font-size: 16px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.moveScoreRightValueEl {
+  color: #BA4A00;
+  font-size: 16px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.canMeepleSVG {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.canMeeplePath {
+  opacity: 0.5;
+  fill: #0095ff;
+  fill-opacity: 0.5;
+  fill-rule: nonzero;
+  stroke: #251c47;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+  paint-order: fill markers stroke;
+
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+
+.noMeepleButton {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  opacity: 0.75;
+  background-color: #D7DBDD;
+  border-color: #3B3B3B;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: arial;
+  cursor: pointer;
+}

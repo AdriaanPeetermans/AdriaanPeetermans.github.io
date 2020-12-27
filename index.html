@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Spellen Zolder</title>
+		<script src="messageParser.js"></script>
+		<script src="serverInterface.js"></script>
+		<script src="gamePlace.js"></script>
+		<!-- <script src="carcassonne.js"></script> -->
+
+		<link rel="stylesheet" href="gamePlace.css">
+		<link rel="icon" href="Images/carcassonneLogo.png">
+
+	</head>
+	<body onload="loadGames()">
+
+		<div class="mainContainer">
+			<div class="topBar">
+				<div class="pWebLogoContainer">
+					<img src="Images/pWebLogo.png" height="55">
+				</div>
+				<div class="middleTopBarContainer">Spellen Zolder</div>
+				<div class="rightTopBarContainer">
+					<img src="Images/carcassonneLogo.png" height="55">
+				</div>
+			</div>
+			<div class="noConnectBar" id="noConnectBar">
+				Geen verbinding met de server!
+			</div>
+			<div class="underBar" id="underBar">
+				<div class="addGameContainer" id="addGameContainer">
+					<div class="addGamePlusContainer">+</div>
+					<div class="addGameTextContainer">Spel toevoegen</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
